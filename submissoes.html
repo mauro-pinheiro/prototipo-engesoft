@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="scaffolded-by" content="https://github.com/dart-lang/stagehand">
+    <title>EngeSoft - Submissões</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/top-bar.css">
+    <link rel="stylesheet" href="css/submissao.css">
+    <link rel=" icon" href="favicon.ico">
+</head>
+
+<body>
+
+    <nav class='top-bar'>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="edicoes.html">Edições</a></li>
+            <li class='active'><a href="submissoes.html">Minhas Submissões</a></li>
+            <li><a href="avaliacoes.html">Avaliações</a></li>
+            <li class='sign'><a href="login.html">Sign in</a></li>
+            <li class='sign'><a href="cadastro.html">Sign up</a></li>
+        </ul>
+    </nav>
+    <header id="titulo">
+        <h1>Minhas Submissões</h1>
+    </header>
+
+
+    <div id="body">
+        <form>
+            <input type:'text' id="filtro">
+            <button id="novo">Novo</button>
+        </form>
+        <section id="submissoes">
+            <table>
+                <caption>
+                    <h2>Submissões</h2>
+                </caption>
+                <thead>
+                    <th class="first-th">Artigo</th>
+                    <th>Contato</th>
+                    <th>Media</th>
+                    <th>Situação</th>
+                </thead>
+                <tbody>
+                    <!-- Aqui vem as edições -->
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+    <footer id='footer'>Grupo EngeSoft | Analise 2<br>2019.2</footer>
+
+    <script>
+        document.querySelector("#novo").addEventListener('click', event => {
+            event.preventDefault();
+            window.location.href = "form.html";
+        });
+    </script>
+</body>
+
+</html>
