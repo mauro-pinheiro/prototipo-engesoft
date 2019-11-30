@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="scaffolded-by" content="https://github.com/dart-lang/stagehand">
+    <title>EngeSoft - Formulario</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/top-bar.css">
+    <link rel="stylesheet" href="css/form.css">
+    <link rel=" icon" href="favicon.ico">
+    <script defer src="form.dart.js"></script>
+</head>
+
+<body>
+
+    <nav class='top-bar'>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="edicoes.html">Edições</a></li>
+            <li><a href="submissoes.html">Minhas Submissões</a></li>
+            <li><a href="avaliacoes.html">Avaliações</a></li>
+            <li class='sign'><a href="login.html">Sign in</a></li>
+            <li class='sign'><a href="cadastro.html">Sign up</a></li>
+        </ul>
+    </nav>
+    <header id="titulo">
+        <h1>EngeSoft</h1>
+    </header>
+    <div id="body">
+        <form>
+            <label>
+                <span class='label'>Edição</span>
+                <input type="text" placeholder="Edicao Atual" readonly name="edicao">
+            </label>
+            <label>
+                <span class='label'>Titulo</span>
+                <input type="text" name="titulo">
+            </label>
+
+            <label>
+                <span class="label">Nome</span>
+                <input type="text" name="nome">
+                <button id='add-autor-btn'>Adicionar</button>
+            </label>
+
+            <label>
+                <span class="label">Email</span>
+                <input type="text" name="email">
+            </label>
+            <label>
+                <span class="label">Instituicao</span>
+                <input type="text" name="instituicao">
+            </label>
+            <label>
+                <span class="label">Arquivo</span>
+                <input type="text" name="arquivo">
+                <button id='busca-arquivo-btn'>Buscar</button>
+            </label>
+            <table>
+                <caption>Autores</caption>
+                <thead>
+                    <th>Nome</th>
+                    <th>Email</th>
+                    <th>Instituiçao</th>
+                    <th>Contato</th>
+                    <th>Remover</th>
+                </thead>
+                <tbody id="autor-table">
+
+                </tbody>
+            </table>
+        </form>
+    </div id="body">
+    <footer id='footer'>Grupo EngeSoft | Analise 2<br>2019.2</footer>
+</body>
+
+</html>
