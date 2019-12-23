@@ -1,5 +1,6 @@
 import 'dart:html';
 
+import '../controllers/Controller.dart';
 import 'PageBodyView.dart';
 import 'SideBarView.dart';
 import 'TopbarView.dart';

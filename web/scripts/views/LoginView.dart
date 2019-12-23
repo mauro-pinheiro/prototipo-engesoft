@@ -3,7 +3,8 @@ import 'dart:html';
 import '../controllers/Controller.dart';
 import '../controllers/LoginController.dart';
 import 'CadastroRapidoView.dart';
-import 'EdicoesView.dart';
+import 'ProfileView.dart';
+import 'TabelaEdicoesView.dart';
 import 'MainView.dart';
 import 'SideBarView.dart';
 import 'TopbarView.dart';
@@ -72,8 +73,7 @@ class LoginView extends View {
                   ..classes.add('btn-link')
                   ..text = "Cadastre-se"
                   ..onClick.listen(
-                    (e) => Controller.load(
-                      _container.parent,
+                    (e) => Controller.loadOnBody(
                       CadastroRapidoView(),
                     ),
                   ),
@@ -113,8 +113,8 @@ class LoginView extends View {
       _erro.text = "Autenticado com sucesso";
       Future.delayed(
           const Duration(seconds: 2),
-          () => Controller.load(_container.parent,
-              MainView(TopbarView(), SideBarView(), EdicaoView())));
+          () => Controller.loadOnBody(
+              MainView(TopbarView(), SideBarView(), ProfileView())));
     }
   }
 }

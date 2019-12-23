@@ -10,5 +10,7 @@ main() {
   // querySelector('body'),
   // HomeView());
 
-  Controller.load(querySelector('body'), LoginView());
+  Controller.body = querySelector('body');
+
+  Controller.loadOnBody(LoginView());
 }

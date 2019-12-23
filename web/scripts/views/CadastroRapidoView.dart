@@ -84,7 +84,7 @@ class CadastroRapidoView extends View {
                   ..classes.add('btn-link')
                   ..text = "Faça Login"
                   ..onClick.listen(
-                    (e) => Controller.load(_container.parent, LoginView()),
+                    (e) => Controller.loadOnBody(LoginView()),
                   ),
               ),
           ),
@@ -143,7 +143,7 @@ class CadastroRapidoView extends View {
         _feedback.text = "Cadastro realizado com sucesso!";
         // sleep(const Duration(seconds: 3));
         Future.delayed(const Duration(seconds: 2),
-            () => Controller.load(_container.parent, LoginView()));
+            () => Controller.loadOnBody(LoginView()));
         break;
     }
   }
