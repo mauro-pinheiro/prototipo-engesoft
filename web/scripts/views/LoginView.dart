@@ -3,7 +3,10 @@ import 'dart:html';
 import '../controllers/Controller.dart';
 import '../controllers/LoginController.dart';
 import 'CadastroRapidoView.dart';
+import 'EdicoesView.dart';
+import 'MainView.dart';
 import 'SideBarView.dart';
+import 'TopbarView.dart';
 import 'View.dart';
 
 class LoginView extends View {
@@ -108,8 +111,10 @@ class LoginView extends View {
       // _erro.classes.add('hidden');
       _erro.classes.add('success');
       _erro.text = "Autenticado com sucesso";
-      Future.delayed(const Duration(seconds: 2),
-          () => Controller.load(_container.parent, SideBarView()));
+      Future.delayed(
+          const Duration(seconds: 2),
+          () => Controller.load(_container.parent,
+              MainView(TopbarView(), SideBarView(), EdicaoView())));
     }
   }
 }

@@ -1,9 +1,8 @@
 import 'dart:html';
 
-import 'View.dart';
+import 'PageBodyView.dart';
 
-class EdicaoView extends View {
-  DivElement _container = DivElement();
+class EdicaoView extends PageBodyView {
   TableElement _table = TableElement();
   @override
   Element build() {
@@ -17,7 +16,7 @@ class EdicaoView extends View {
 
     _table.createTBody().id = 'edicoes-body';
 
-    return _container
+    return container
       ..append(Element.tag('h1')
         ..text = "Edicões"
         ..style.textAlign = "center")

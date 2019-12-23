@@ -15,7 +15,7 @@ class LoginController extends Controller {
     return _instance ??= LoginController._();
   }
 
-  get logado => _logado;
+  User get logado => _logado;
 
   bool login(String userName, String password) {
     var user =

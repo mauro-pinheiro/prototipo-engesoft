@@ -5,11 +5,12 @@ import 'View.dart';
 class SideBarView extends View {
   DivElement _container = DivElement();
   DivElement _sidebar = DivElement();
+  CheckboxInputElement _check = CheckboxInputElement();
   @override
   Element build() {
     return _container
       ..classes.add('side-container')
-      ..append(CheckboxInputElement()..id = 'check')
+      ..append(_check..id = 'check')
       ..append(LabelElement()
         ..htmlFor = 'check'
         ..appendHtml('<i class="fas fa-bars" id="btn"></i>')
@@ -31,4 +32,6 @@ class SideBarView extends View {
       ..append(AnchorElement(href: href)
         ..innerHtml = '<i class="$fa_icon"></i> $texto');
   }
+
+  CheckboxInputElement get check => _check;
 }

@@ -10,7 +10,7 @@ class TopbarView extends View {
       ..classes.addAll(['topbar'])
       ..append(SpanElement()
         ..classes.add('user-logado')
-        ..text = "Mauro");
+        ..text = LoginController().logado.usuario);
     // ..text = LoginController().logado);
     // ..appendText(LoginController().logado);
     // ..appendText('Mauro');

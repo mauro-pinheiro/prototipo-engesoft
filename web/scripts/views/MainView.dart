@@ -1,5 +1,6 @@
 import 'dart:html';
 
+import 'PageBodyView.dart';
 import 'SideBarView.dart';
 import 'TopbarView.dart';
 import 'View.dart';
@@ -8,9 +9,11 @@ class MainView extends View {
   DivElement _container = DivElement();
   TopbarView _topbar;
   SideBarView _sidebar;
-  View _pagebody;
+  PageBodyView _pagebody;
 
-  MainView(this._topbar, this._sidebar, this._pagebody);
+  MainView(this._topbar, this._sidebar, this._pagebody) {
+    _sidebar.check.onChange.listen((e) => _onChange(e));
+  }
 
   @override
   Element build() {
@@ -27,4 +30,15 @@ class MainView extends View {
   set topbar(value) => _topbar = value;
   set sidebar(value) => _sidebar = value;
   set pagebody(value) => _pagebody = value;
+
+  _onChange(Event e) {
+    var target = e.target;
+    if (target is CheckboxInputElement) {
+      if (target.checked) {
+        _pagebody.container.style.marginLeft = "275px";
+      } else {
+        _pagebody.container.style.marginLeft = "25px";
+      }
+    }
+  }
 }
